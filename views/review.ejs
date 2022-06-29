@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Reviews</title>
+    <link rel="stylesheet" href="css/review.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/dropdown.css">
+</head>
+<body style="background-color: black;">
+    <script src="https://use.fontawesome.com/a6f0361695.js"></script>
+    <header>
+      <a href="/" class="logo">blogs<span>Hut</span></a>
+      <nav class="navbar">
+          <a class="active" href="/home">Home</a>
+          <a href="/blog">Blog</a>
+          <a href="/write">Write</a>
+          <a href="/about">About</a>
+          <a href="/review">Review</a>
+          <a href="/contact">Contact</a>
+      </nav>
+
+      <div class="icons">
+          <i class="fas fa-bars" id="menu-bars"></i>
+          <a  style="background: none; padding: 0;" id="user" href="/profile"><i class="fa-solid fa-user"></i></a>
+      </div>
+      <div class="profile">  
+          <div class="dropdown">
+              <a style="text-transform: none; font-size: 1.7rem; color: black;" href="#" ><%= username%> <i class="fa-solid fa-chevron-down"></i></a>
+              <div class="dropdown-content">
+              <a href="/profile"><i class="fa-solid fa-user"></i> profile</a>
+              <a href="/logout"><i class="fa-solid fa-right-from-bracket"></i> logout</a>
+              </div>
+            </div>
+      </div>
+  </header>
+
+    <h2 style="margin-top: 10rem;" id="fh2">I APPRECIATE YOUR REVIEW!</h2>
+     <a href="#" class="btn" onclick="openform()" style="text-decoration: none;">Give Your Feedback Here</a>
+    <div id="review-form">
+      <form id="feedback" action="/reviewform" method="post">
+
+      <div class="pinfo">Rate our overall services.</div>
+      <div class="form-group">
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-star"></i></span>
+        <select class="form-control" name="rating" id="rate">
+          <option value="">-- SELECT --</option>
+            <option value="&#9733;">1</option>
+            <option value="&#9733; &#9733;">2</option>
+            <option value="&#9733; &#9733; &#9733;">3</option>
+            <option value="&#9733; &#9733; &#9733; &#9733;">4</option>
+            <option value="&#9733; &#9733; &#9733; &#9733; &#9733;">5</option>
+          </select>
+          </div>
+        </div>
+      </div>
+      
+
+      <input style="display: none;" type="text" name="name" value="<%= name%>">
+      <div class="pinfo">Write your feedback.</div>
+      <div class="form-group">
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-pencil"></i></span>
+        <input style="height:8rem ;" class="form-control" name="comment" id="review" rows="5" placeholder="Write your feedback">
+          </div>
+        </div>
+      </div>
+      
+      <input type="submit" name="submit" class="btn btn-primary">
+      
+      
+      </form>
+    </div>
+
+    <section id="reviews">
+      
+      <h1 style="margin-top: 4rem;">Reviews</h1>
+      <hr>
+    </section>
+
+    <div class="wrapper">
+      <% revw.forEach(function(rv){ %>
+        <div class="blog_post">
+          <div class="container_copy">
+            <h3><span><%= rv.rating%></span></h3>
+            <h4><%= rv.name%></h4>
+            <p><%= rv.comment%></p>
+            <h6 style="text-align:left ; color:#3aafa9"><%= rv.date%></h6>
+          </div>  
+       </div>
+       <% }) %>
+       <div class="blog_post">
+        <div class="container_copy">
+          <h3><span>★ ★ ★ ★ ★</span></h3>
+          <h4>Md Reyaz Alam</h4>
+          <p>Great Website Attractive UI</p>
+          <h6 style="text-align:left ; color:#3aafa9">08-06-2022 13:36:35</h6>
+        </div>  
+     </div>
+     <div class="blog_post">
+        <div class="container_copy">
+          <h3><span>★ ★ ★ ★ ★</span></h3>
+          <h4>Md Reyaz Alam</h4>
+          <p>Great Website Attractive UI</p>
+          <h6 style="text-align:left ; color:#3aafa9">08-06-2022 13:36:35</h6>
+        </div>  
+     </div>
+     <div class="blog_post">
+        <div class="container_copy">
+          <h3><span>★ ★ ★ ★ ★</span></h3>
+          <h4>Md Reyaz Alam</h4>
+          <p>Great Website Attractive UI</p>
+          <h6 style="text-align:left ; color:#3aafa9">08-06-2022 13:36:35</h6>
+        </div>  
+     </div>
+     <div class="blog_post">
+        <div class="container_copy">
+          <h3><span>★ ★ ★ ★ ★</span></h3>
+          <h4>Md Reyaz Alam</h4>
+          <p>Great Website Attractive UI</p>
+          <h6 style="text-align:left ; color:#3aafa9">08-06-2022 13:36:35</h6>
+        </div>  
+     </div>
+    </div>
+   <script>
+        let menu = document.querySelector('#menu-bars');
+        let navbar = document.querySelector('.navbar');
+        menu.onclick = () =>{
+        menu.classList.toggle('fa-times');
+        navbar.classList.toggle('active');
+
+      }
+     function openform(){
+       document.getElementById("review-form").style.display = "flex";
+     }
+   </script>
+
+   
+
+</body>
+</html>

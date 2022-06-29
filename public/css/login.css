@@ -1,0 +1,149 @@
+:root{
+  --blue:#3aafa9;
+  --black:#17252A;
+  --light-color:#def2f1;
+  --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background:var(--blue)
+}
+.login-container{
+
+    height: auto;
+    width: 45rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    border-radius: 2rem;
+    margin-top: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.register-container{
+  margin-top: 2rem;
+  height: auto;
+  width: 45rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  border-radius: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.register-container .title{
+    text-align: center;
+    margin: 3.2rem;
+}
+.register-container span{
+    text-align: center;
+    
+}
+.register-container .register{
+    width: 70%;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+.login-container .login{
+  width: 70%;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+.login-container .login label b{
+  font-size: 1.8rem;
+}
+.register-container .register label b{
+  font-size: 1.8rem;
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f136;
+    border-radius: 1rem;
+    text-transform: none;
+  }
+  
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+    border-radius: 1rem;
+  }
+  
+  hr {
+    border: 0.5px solid #f1f1f1;
+    margin-bottom: 20px;
+  }
+  
+  .registerbtn {
+    background-color: var(--black);
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    border-radius: 1rem;
+    font-size: 1.8rem;
+  }
+  
+  .registerbtn:hover {
+    opacity: 1;
+  }
+  
+  
+  a {
+    color: rgb(218, 222, 226);
+  }
+  .signin {
+    text-align: center;   
+     margin-bottom: 1.6rem;
+     font-size: 1.2rem;
+  }
+
+  @media (max-width:900px){
+    .register-container{
+      width: 50rem;
+    }
+    .login-container{
+      width: 50rem;
+    }
+  }
+  
+  @media (max-width:650px){
+    .register-container{
+      width: 80%;
+    }
+    .login-container{
+      width: 80%;
+    }
+  }
+  @media (max-width:485px){
+    .register-container{
+      width: 98%;
+    }
+    .login-container{
+      width: 98%;
+    }
+    .register-container .register{
+      width: 93%;
+    }
+    .login-container .login{
+      width: 93%;
+    }
+  }

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Login Page</title>
+</head>
+<body>
+    <header>
+      <a href="/" class="logo">blogs<span>Hut</span></a>
+      <nav class="navbar">
+          <a href="/home">Home</a>
+          <a href="/blog">Blog</a>
+          <a href="/write">Write</a>
+          <a href="/about">About</a>
+          <a href="/review">Review</a>
+          <a href="/contact">Contact</a>
+      </nav>
+
+      <div class="icons">
+          <a href="/register" >Register</a>
+      </div>
+    </header>
+    <div class="login-container" id="login-container">
+        <div class="login" id="login">
+          <form action="/login" method="post">
+              <div class="container">
+                <label for="username"><b>Username</b></label>
+                <input type="text" placeholder="Enter username" name="username" id="username" required>            
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="password" id="psw" required>
+            
+                <button type="submit" class="registerbtn">Login</button>
+              </div>
+              
+              <div class="container signin">
+                <p>Dont't have an account? <a href="/register">Create account</a>.</p>
+              </div>
+            </form>
+      </div>
+    </div>
+    <script>
+      let menu = document.querySelector('#menu-bars');
+      let navbar = document.querySelector('.navbar');
+      menu.onclick = () =>{
+      menu.classList.toggle('fa-times');
+      navbar.classList.toggle('active');
+
+}
+  </script>
+</body>
+</html>

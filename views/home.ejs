@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+
+    <!--font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+     integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dropdown.css">
+
+    </head>
+<body>
+    <header>
+        <a href="/" class="logo">blogs<span>Hut</span></a>
+        <nav class="navbar">
+            <a class="active" href="/home">Home</a>
+            <a href="/blog">Blog</a>
+            <a href="/write">Write</a>
+            <a href="/about">About</a>
+            <a href="/review">Review</a>
+            <a href="/contact">Contact</a>
+        </nav>
+
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <a  style="background: none; padding: 0;" id="user" href="/profile"><i class="fa-solid fa-user"></i></a>
+        </div>
+        <div class="profile">  
+            <div class="dropdown">
+                <a style="text-transform: none; font-size: 1.7rem; color: black;" href="#" ><%= username%> <i class="fa-solid fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                <a href="/profile"><i class="fa-solid fa-user"></i> profile</a>
+                <a href="/logout"><i class="fa-solid fa-right-from-bracket"></i> logout</a>
+                </div>
+              </div>
+        </div>
+    </header>
+
+    <section class="home" id="home">
+        <div class="content">
+            <h3>Blogging is not about earning. Its about serving the Humanity.</h3>
+            <p>“Stay away from those people who try to disparage your ambitions. Small minds will
+                 always do that, but great minds will give you a feeling that you can become great too.”</p>
+                 <a href="/blog" class="btn">Explore Blogs</a>
+        </div>
+        <div class="image">
+            <img src="images/image.png" alt="">
+        </div>
+    </section>
+
+
+    <div class="footer">
+        <div class="box-container">
+
+           <div class="box">
+               <h3>about us</h3>
+               <p>We have crossed 10 million happy customers and 100 million rides.
+                Rapido is here to revolutionize intra-city travel as we bring youredefined comfort
+                & convenience with our disruptive service model.</p>
+           </div>
+           <div class="box">
+               <h3>quick links</h3>
+                <a href="#">home</a>
+                <a href="#blog">blog</a>
+                <a href="#about">about</a>
+                <a href="#contact">contact</a>
+           </div>
+           <div class="box">
+               <h3>follow us</h3>
+               <a href="#">LinkedIn</a>
+               <a href="#">Instagram</a>
+               <a href="#">facebook</a>
+               <a href="#">twitter</a>
+           </div>
+           <div class="box">
+               <h3>contact info</h3>
+               <div class="info">
+                   <i class="fas fa-phone"></i>
+                   <p>+123-456-7890 <br> +111-222-7890</p>
+               </div>
+               <div class="info">
+                   <i class="fas fa-envelope"></i>
+                   <p> mra@gmail.com <br> reyaz@gmail.com </p>
+               </div>
+               <div class="info">
+                   <i class="fas fa-map-marker-alt"></i>
+                   <p>Kulti, West Bengal - 713343</p>
+               </div>
+           </div>
+        </div>
+        <h1 class="credit">&copy; copyright @2022 by Md Reyaz Alam</h1>
+    </div>
+
+
+
+
+
+    <script>
+        let menu = document.querySelector('#menu-bars');
+        let navbar = document.querySelector('.navbar');
+        menu.onclick = () =>{
+        menu.classList.toggle('fa-times');
+        navbar.classList.toggle('active');
+
+}
+    </script>
+</body>
+</html>

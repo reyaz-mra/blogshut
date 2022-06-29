@@ -1,0 +1,69 @@
+
+section{
+    min-height: 100vh;
+    padding: 0 9%;
+    padding-top: 6.8rem;
+    padding-bottom: 2rem;
+}
+.contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 3rem;
+}
+.contact .image{
+    flex: 1 1 40rem;
+}
+.contact .image img{
+    /* width: 100%; */
+    padding: 2rem;
+    height: 35rem;
+}
+.contact form{
+    flex: 1 1 40rem;
+    padding: 2rem 3rem;
+    border-radius: .5rem;
+    background: #fff;
+}
+
+.contact form .heading{
+    text-align: left;
+    padding: 0;
+    padding-bottom: 2rem;
+}
+.contact form .inputBox{
+    position: relative;
+}
+.contact form .inputBox label{
+    font-size: 1.5rem;
+}
+.contact form .inputBox input, .contact form .inputBox textarea{
+    width: 100%;
+    background: none;
+    margin: 1.5rem 0;
+    padding: .5rem 0;
+    font-size: 1.7rem;
+    border: .5px solid rgba(0, 0, 0, .1);
+    text-transform: none;
+}
+.contact form .inputBox textarea{
+    resize: none;
+    height: 13rem;
+}
+.btn{
+    margin-top: 2rem;
+    border: none;
+    display: inline-block;
+    background-color: #3aafa9;
+    font-size: 1.7rem;
+    border-bottom-left-radius: 2.5rem;
+    border-top-right-radius: 2.5rem;
+    cursor: pointer;
+    padding: .8rem 3rem;
+}
+.btn:hover{
+    border-radius: 2.5rem;
+    transition: .3s;
+    color: var(--black);
+}
