@@ -24,7 +24,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // initialize cookie-parser to allow us access the cookies stored in the browser.
 app.use(cookieParser());
-
+//App.js is made by Md Reyaz Alam
+// Author: Md Reyaz Alam
 
 
 // initialize express-session to allow us track the logged-in user across sessions.
