@@ -1,11 +1,6 @@
 const mongoose = require('mongoose')
 const bcrypt = require('bcrypt')
 
-mongoose.connect("mongodb://localhost:27017/userDB",{
-    useNewUrlParser:true,
-    useUnifiedTopology:true
-})
-
 const userSchema = mongoose.Schema({
     name:{
         type:String,
