@@ -117,6 +117,7 @@ section{
 }
 .home .content{
     flex: 1 1 45rem;   
+    margin-top:2rem;
 }
 .home .image{
     margin-top: 2rem;
