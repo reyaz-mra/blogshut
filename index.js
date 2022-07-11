@@ -7,6 +7,7 @@ var morgan = require("morgan");
 var User = require("./models/User");
 var Blog = require("./models/Blog");
 var Review = require("./models/review");
+const { connectToMongo } = require("./mongoose");
 const { render } = require('ejs');
 var multer = require('multer');
 var JSAlert = require("js-alert");
@@ -282,7 +283,17 @@ app.use(function (req, res, next) {
   res.status(404).send("Sorry can't find that!");
 });
 
-// start the express server
-app.listen(app.get("port"), () =>
-  console.log(`App started on port ${app.get("port")}`)
-);
+async function main() {
+  // Connect to the database
+  await connectToMongo();
+
+  // start the express server
+  app.listen(app.get("port"), () =>
+    console.log(`App started on port ${app.get("port")}`)
+  );
+}
+
+main().catch((err) => {
+  console.log("Exiting on error:", err);
+  process.exit(1);
+});
