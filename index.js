@@ -17,7 +17,7 @@ app.set("view engine","ejs");
 //app.set("port", 4000);
 // const port = Process.env.PORT || 4000;
 
-app.set("port", process.env.port || 4000);
+app.set("port", process.env.PORT || 4000);
 
 app.use(express.static(__dirname + '/public'));
 // set morgan to log info about our requests for development use.
