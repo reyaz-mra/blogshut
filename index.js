@@ -1,7 +1,8 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var cookieParser = require("cookie-parser");
-var session = require("express-session");
+// var session = require("express-session");
+var session = require('cookie-session');
 var morgan = require("morgan");
 var User = require("./models/User");
 var Blog = require("./models/Blog");
