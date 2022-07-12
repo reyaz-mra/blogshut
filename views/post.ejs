@@ -43,9 +43,9 @@
         <div class="featured-image">
           <img src="<%= blog.img %>" alt="">
         </div>
-         <h1 class="entry-title" style="font-family:'Times New Roman', Times, serif ;"><%= blog.title %></h1>
+         <h1 class="entry-title" style="font-family:'Times New Roman', Times, serif ; text-transform:none"><%= blog.title %></h1>
         <div class="entry-meta">
-          <p><span class="author">Written by <a href="#"><%= blog.name %></a></span> <span class="date" style="font-size:1.3rem ;">Published on:<%= blog.date %></span></p>
+         <p><span class="author">Written by <br><a><%= blog.name %></a></span><span class="date" style="font-size:1.3rem ;"><br>Published on: <%= blog.date %></span></p>
         </div>
         <div class="entry-content" style="white-space: pre-line; text-transform: none; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"">
           <%= blog.notes %>
