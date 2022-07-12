@@ -49,7 +49,7 @@
 
 
     <section id="blog" style="margin-top: 12rem;">
-      <h2 style="font-size:6rem; text-align:center; margin-bottom:4rem" >Recent Posts</h2>
+      <h2 style="font-size:6rem; text-align:center; margin-bottom:3.6rem" >Recent Posts</h2>
 
       <% blogs.forEach(function(blog){ %>
         <div class="blog-box">
@@ -57,8 +57,8 @@
             <img src="<%=blog.img%>" alt="Blog">
           </div>
           <div class="blog-details">
-            <h4><%=blog.title%></h4>
-            <p><%=blog.notes.substring(0,100)%></p>
+            <h4 style="font-family:'Times New Roman', Times, serif ;"><%=blog.title%></h4>
+            <p><%=blog.notes.substring(0,200)%></p>
             <a href="/post/<%=blog._id%>">Continue reading</a>
           </div>
         </div>
@@ -72,7 +72,9 @@
             <p>A decade ago, you could count the number of men’s style bloggers on one hand. Clearly those days are long gone. Today,
               sifting through all of them would take an eternity. So we’ve gathered 10 that inspire us so you can bookmark them and
               get inspired too.</p>
-            <a href="/post">Continue reading</a>
+            <a href="/post">Continue reading</a><br>
+            <span class="author"><p style="font-size: 1.2rem; font-family: 'Times New Roman', Times, serif;">Published by: <%= blog.name %></p></span>
+
           </div>
           
         </div>
